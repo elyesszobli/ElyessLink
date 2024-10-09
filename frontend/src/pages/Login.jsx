@@ -44,13 +44,14 @@ function Login() {
                 Se connecter
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Vous n'avez pas encore de compte ? 
+                Vous n avez pas encore de compte ? 
                 <a
                   href="#"
                   className="font-medium text-primary-600 hover:underline dark:text-sky-500 hover:text-white"
                 >
-                   S'inscrire
+                   S inscrire
                 </a>
+              
               </p>
             </form>
           </div>
