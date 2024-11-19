@@ -1,9 +1,13 @@
+import Header from '../components/Header';
 
 function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <>
+      <Header/>
+      <div className='bg-gray-800 h-screen'>
+        <h1>Home</h1>
+      </div>
+    </>
   )
 }
 
