@@ -22,22 +22,26 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://localhost:7264/Auth', {
+      const response = await fetch('https://localhost:7264/Auth/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
+        credentials: 'include',
       });
   
       if (!response.ok) {
         throw new Error('Erreur de réseau ou de serveur');
       }
+      else{
+        console.log("utilisateur bien connecter");
+
+      }
   
       const data = await response.json();
       console.log(data);
-      localStorage.setItem('token', data.token);
-      navigate('/home');
+      navigate('/');
     } catch (error) {
       console.error('Erreur lors de l\'envoi de la requête POST:', error);
     }
