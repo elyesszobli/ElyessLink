@@ -15,9 +15,9 @@ const AuthChecker = ({ children }) => {
         if (data.isLoggedIn) {
           navigate('/');
         } 
-        // else {
-        //   navigate('/login');
-        // }
+         else {
+           navigate('/login');
+         }
       } catch (error) {
         console.error('Error checking authentication:', error);
         
