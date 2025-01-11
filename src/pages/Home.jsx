@@ -48,7 +48,7 @@ function Home() {
         <div className={styles.Z2}>
           <PostForm />
           {data.map((post) => (
-            <PostCard key={post.id} username={post.user.username} content={post.content} image={post.imagePath} LikeCount={post.LikeCount}/>
+            <PostCard key={post.id} username={post.user.username} content={post.content} image={post.imagePath} initialLikeCount ={post.LikeCount+""} postId={post.id}/>
           ))}
         </div>
         <div className={styles.Z3}>

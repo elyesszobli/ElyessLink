@@ -1,11 +1,8 @@
-import { useNavigate } from 'react-router-dom';
-
 const LogoutButton = () => {
-    const navigate = useNavigate();
-
     const handleLogout = async () => {
         try {
             const response = await fetch('https://localhost:7264/Auth', {
+                credentials: 'include',
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
@@ -18,7 +15,9 @@ const LogoutButton = () => {
 
             const data = await response.json();
             console.log(data);
-            navigate("/login");
+
+            window.location.reload();
+
         } catch (error) {
             console.error('Error deleting token:', error);
         }
